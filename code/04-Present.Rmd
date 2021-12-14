@@ -1,0 +1,26 @@
+---
+title: "Present"
+author: "JJayes"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+    bookdown::html_document2:
+        toc: true
+        toc_float: true
+        number_sections: false
+# This section will knit your Rmarkdown file to the root directory to easily deploy to Github Pages
+knit: (function(input, ...) {
+    rmarkdown::render(
+      input,
+      output_file = paste0(
+        here::here(), '/index.html'
+      ),
+      envir = globalenv()
+    )
+  })
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = F, warning = F, fig.align = "center")
+```
+
+Test
